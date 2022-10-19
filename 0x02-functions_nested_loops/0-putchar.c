@@ -1,16 +1,18 @@
+#include "main.h"
 #include <stdio.h>
 
-int main()
+/**
+ * main - Entry point
+ *
+ * Description: Prints _putchar, followed by a new line
+ *
+ * Return: Always returns 0 (success)
+ */
+int main(void)
 {
-  int i;
+	char *s = "_putchar\n";
 
-  putchar ('X');
-  putchar (' ');
-  for (i=1; i<=10; i++)
-    {
-      putchar ('!');
-    }
-  putchar ('\n');
-
-  return 0;
+	while (*s)
+		putchar(*s++);
+	return (0);
 }
