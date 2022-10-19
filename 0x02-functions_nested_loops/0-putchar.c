@@ -16,3 +16,4 @@ int main(void)
 		putchar(*s++);
 	return (0);
 }
+
