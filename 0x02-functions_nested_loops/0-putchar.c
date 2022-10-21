@@ -1,19 +1,23 @@
 #include "main.h"
-#include <stdio.h>
 
 /**
- * main - Entry point
+ * main - Prints _putchar
  *
- * Description: Prints _putchar, followed by a new line
+ * Description: Using _putchar function
+ * from "main.h" file this prints _putchar to the stdout
  *
- * Return: Always returns 0 (success)
+ * Return: 0 (success)
  */
 int main(void)
 {
-	char *s = "_putchar\n";
-
-	while (*s)
-		putchar(*s++);
+	_putchar('_');
+	_putchar('p');
+	_putchar('u');
+	_putchar('t');
+	_putchar('c');
+	_putchar('h');
+	_putchar('a');
+	_putchar('r');
+	_putchar('\n');
 	return (0);
 }
-
