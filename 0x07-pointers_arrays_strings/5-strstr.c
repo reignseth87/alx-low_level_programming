@@ -1,36 +1,41 @@
-#include <stdio.h>
+#include <stddef.h>
 #include "main.h"
-/**
- * _strstr - a function that locates a substring
- * @haystack: string to find substring in
- * @needle: substring to find in haystack
- * Return: Beginning of located substring
- * Or NULL is substring is not found
- */
+#include <stdio.h>
 
+/**
+ * main - check the code for Main School students.
+ * _strstr - locate a substring
+ *
+ * Return: Always 0.
+ * @haystack: the string to look for a substring
+ * @needle: the substring
+ *
+ * Return: first occurrence of the substring, if not found NULL
+ */
+int main(void)
 char *_strstr(char *haystack, char *needle)
 {
+	char *s = "wworld of this";
+	char *f = "world";
+	char *t;
 	int i, j;
-	for (; *haystack != '\0'; haystack++)
-	{
-		char *i = haystack;
-		char *j = needle;
 
-	for (j = 0; needle[j] != '\0'; j++)
-		while (*i == *j && *j != '\0')
-		{
-			i++;
-			j++;
-		}
-
+	t = _strstr(s, f);
+	printf("%s\n", t);
+	return (0);
+	i = j = 0;
+	while (haystack[i])
 	{
-		for (i = 0; haystack[i] != '\0'; i++)
-		if (*j == '\0')
+		while (needle[j])
 		{
-			if (needle[j] != haystack[i])
-			{
-				return (needle);
-			}
-			return (haystack);
+			if (haystack[i + j] != needle[j])
+				break;
+			++j;
 		}
+		if (needle[j] == '\0')
+			return (haystack + i);
+		j = 0;
+		++i;
 	}
+	return (NULL);
+}
